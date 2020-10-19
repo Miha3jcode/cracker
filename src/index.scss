@@ -1,2 +1,46 @@
 @import '@scss/fonts.scss';
 @import '@scss/colors.scss';
+
+body{
+  background: #888;
+  margin: 0;
+}
+
+.text{
+  font: 16px/26px Lato-Regular;
+  margin: 0;
+  color: $clearWhiteText;
+
+  &_dark{
+    color: $darkText;
+  }
+}
+
+.header{
+  font: 40px/1.4 Fredoka_One;
+  margin: 0;
+  color: $whiteText;
+  text-transform: uppercase;
+
+  &_color_gray{
+    color: $grayText;
+  }
+
+  &_color_dark{
+    color: $darkText;
+  }
+}
+
+.logo-text{
+  font: 60px Kristi;
+  margin: 0;
+  color: $whiteText;
+
+  &_dark{
+    color: $darkText;
+  }
+}
+
+.link{
+  text-decoration: none;
+}
