@@ -1,1 +1,1 @@
-import '@scss/fonts.scss';
+import './index.scss';
