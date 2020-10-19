@@ -73,8 +73,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json'],
     alias: {
-      '@models': path.resolve(__dirname, 'src/models'),
-      '@': path.resolve(__dirname, 'src'),
+      '@fonts': path.resolve(__dirname, 'src/fonts'),
+      '@scss': path.resolve(__dirname, 'src/scss'),
     }
   },
   devtool: isDev ? 'source-map' : '',
