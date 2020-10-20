@@ -196,3 +196,24 @@ body{
     height: 100%;
   }
 }
+
+.seed{
+  position: relative;
+  display: inline-block;
+  
+  &__counter{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(56%,-53%);
+    display: inline-block;
+    font: 14px Lato;
+    margin: 0;
+    min-width: 14px;
+    text-align: center;
+    color: $clearWhiteText;
+    background: $primaryColor;
+    padding: 3px 5px 5px 4px;
+    border-radius: 100%;
+  }
+}
