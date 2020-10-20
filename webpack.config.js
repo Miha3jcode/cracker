@@ -75,6 +75,7 @@ module.exports = {
     alias: {
       '@fonts': path.resolve(__dirname, 'src/fonts'),
       '@scss': path.resolve(__dirname, 'src/scss'),
+      '@img': path.resolve(__dirname, 'src/img'),
     }
   },
   devtool: isDev ? 'source-map' : '',
@@ -86,14 +87,14 @@ module.exports = {
       }
     }),
     new CleanWebpackPlugin(),
-    /*new CopyWebpackPlugin({
+    new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/favicon.ico'),
-          to: path.resolve(__dirname, 'dist')
+          from: path.resolve(__dirname, 'src/img'),
+          to: path.resolve(__dirname, 'dist/img')
         }
       ]
-    }),*/
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     })
@@ -109,7 +110,7 @@ module.exports = {
         use: cssLoaders('sass-loader')
       },
       {
-        test: /\.(png|jpeg|svg|gif)$/,
+        test: /\.(png|jpeg|jpg|svg|gif)$/,
         use: ['file-loader']
       },
       {
