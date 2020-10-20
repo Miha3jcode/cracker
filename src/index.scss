@@ -200,20 +200,70 @@ body{
 .seed{
   position: relative;
   display: inline-block;
-  
+
   &__counter{
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(56%,-53%);
+    transform: translate(56%,-36%);
     display: inline-block;
-    font: 14px Lato;
+    font: 13px Lato;
     margin: 0;
-    min-width: 14px;
+    min-width: 13px;
     text-align: center;
     color: $clearWhiteText;
     background: $primaryColor;
-    padding: 3px 5px 5px 4px;
+    padding: 2px 4px 2px 3px;
     border-radius: 100%;
+  }
+}
+
+.top-line{
+  background: $darkGray;
+  
+  &__logo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(0, 36%);
+  }
+
+  &__central-container{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  &__order-data{
+    display: flex;
+    align-items: center;
+  }
+
+  &__seed{
+    margin: 16px 80px 16px 0;
+  }
+  
+  &__text{
+    font: bold 14px Lato ;
+    color: $clearWhiteText;
+    text-transform: uppercase;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__sum{
+    font: 16px Lato;
+    margin-left: 26px;
+  }
+
+  &__details{
+    //align-self: stretch;
+    cursor: pointer;
+    margin-left: 52px;
+    padding-right: 38px;
+    background: url('@img/angle-down.svg') (no-repeat right 8px center)/16px;
+    display: flex;
+    align-items: center;
   }
 }
