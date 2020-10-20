@@ -136,3 +136,63 @@ body{
     z-index: -1;
   }
 }
+
+.right-comment{
+  position: relative;
+  max-width: 100%;
+
+  &__with-overflow-row{
+    overflow: hidden;
+  }
+
+  &__central-container{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  &__cracker{
+    width: 380px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__cracker-mask{
+    padding-bottom: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+    background: black  url("@img/cracker.jpg")  no-repeat center/cover;
+  }
+
+  &__header{
+    margin-bottom: 44px;
+    margin-top: -12px;
+  }
+
+  &__text-container{
+    width: 620px;
+    max-width: 100%;
+    padding: 30px 80px 76px 80px;
+    position: relative;
+    
+  }
+
+  &__logo-text{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(43%);
+  }
+
+  &__bg-block{
+    background: rgba($color: $pink, $alpha: 0.74);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 200%;
+    height: 100%;
+  }
+}
