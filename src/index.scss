@@ -115,14 +115,19 @@ body{
     width: 332px;
     border-right: 2px solid $clearWhiteText;
     margin-right: 18px;
+    z-index: 1;
   }
 
   &__text{
     margin-top: 130px;
+    text-align: right;
+    margin-right: 18px;
   }
 
   &__header{
     max-width: 420px;
+    z-index: 1;
+    position: relative;
   }
 
   &__bg-block{
@@ -133,7 +138,6 @@ body{
     transform: translateX(-100%);
     margin-left: 34px;
     top: 0;
-    z-index: -1;
   }
 }
 
@@ -279,4 +283,21 @@ body{
   box-shadow: 0px 0px 6px 6px rgba($color: #000, $alpha: 0.12),  0px 6px 6px 0px rgba($color: #000, $alpha: 0.24) ;
   padding: 0 50px;
   background: $primaryColor;
+}
+
+.header-section{
+  background: url(@img/header-bg.jpg) no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  
+
+  &__left-comment{
+    margin: 100px 0 20px 0;
+  }
+
+  &__central-container{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 440px;
+  }
 }
