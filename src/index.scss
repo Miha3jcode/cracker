@@ -7,7 +7,7 @@ body{
 }
 
 .text{
-  font: 16px/26px Lato-Regular;
+  font: 16px/26px Lato;
   margin: 0;
   color: $clearWhiteText;
 
@@ -43,4 +43,18 @@ body{
 
 .link{
   text-decoration: none;
+}
+
+.logo{
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+
+  &__text{
+    position: absolute;
+    right: -13px;
+    bottom: -5px;
+
+    color: $whiteText;
+  }
 }
