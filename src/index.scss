@@ -337,3 +337,46 @@ body{
     opacity: 1;
   }
 }
+
+.add-button{
+  display: inline-block;
+  position: relative;
+
+  &:hover{
+    .add-button__text{
+      width: 220px;
+    }
+
+    .add-button__plus{
+      visibility: hidden;
+    }
+  }
+
+  &__text{
+    font: 22px Fredoka_One;
+    color: $clearWhiteText;
+    padding: 0 26px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+    width: 60px;
+    white-space: nowrap;
+
+    
+  }
+  &__plus{
+    width: 60px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+  }
+  &__text,&__plus{
+    height: 60px;
+    background: none;
+    border: none;
+    background: $primaryColor;
+    box-shadow: 0px 0px 6px 6px rgba($color: #000, $alpha: 0.12),  0px 6px 6px 0px rgba($color: #000, $alpha: 0.24);
+    border-radius: 60px;
+    outline: none;
+  }
+}
