@@ -361,8 +361,6 @@ body{
     transition: width 0.3s ease-in-out;
     width: 60px;
     white-space: nowrap;
-
-    
   }
   &__plus{
     width: 60px;
@@ -378,5 +376,34 @@ body{
     box-shadow: 0px 0px 6px 6px rgba($color: #000, $alpha: 0.12),  0px 6px 6px 0px rgba($color: #000, $alpha: 0.24);
     border-radius: 60px;
     outline: none;
+  }
+}
+
+.select{
+  font: 22px Fredoka_One;
+  color: $primaryColor;
+  text-transform: uppercase;
+  padding: 20px 80px;
+  box-sizing: border-box;
+  border: 1px solid $primaryColor;
+  border-radius: 41px;
+  background: url("/img/angle-down-red.svg") no-repeat right 9% top 53%;
+  outline: none;
+  position: relative;
+  appearance: none;  
+  scrollbar-width: none;
+
+ 
+  &__placeholder{
+    
+  }
+
+  &__item{
+    font: 22px Avenir;
+    color: $primaryColor;
+    text-transform: uppercase;
+    padding: 20px 20px;
+    background: rgba($color: #fff, $alpha: 0.95);
+   
   }
 }
