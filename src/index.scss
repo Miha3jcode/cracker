@@ -58,6 +58,19 @@ body{
   }
 }
 
+.icon-header{
+  display: flex;
+  align-items: center;
+
+  &__header{
+    margin-left: 20px;
+    font: 16px Fredoka_One;
+    color: $clearWhiteText;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
 .logo{
   position: relative;
   display: inline-block;
