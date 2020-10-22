@@ -78,6 +78,7 @@ module.exports = {
       '@sections': path.resolve(__dirname, 'src/scss/sections'),
       '@components': path.resolve(__dirname, 'src/scss/components'),
       '@img': path.resolve(__dirname, 'src/img'),
+      '@js': path.resolve(__dirname, 'src/js'),
     }
   },
   devtool: isDev ? 'source-map' : '',
