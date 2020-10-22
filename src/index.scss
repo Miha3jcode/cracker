@@ -2,7 +2,7 @@
 @import '@scss/colors.scss';
 
 body{
-  background: #fff;
+  background: #888;
   margin: 0;
 }
 
@@ -43,6 +43,9 @@ body{
 }
 
 .link{
+  font: 14px Lato;
+  color: $clearWhiteText;
+  letter-spacing: 1px;
   text-decoration: none;
 }
 
