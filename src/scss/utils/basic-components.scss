@@ -1,5 +1,9 @@
 @use '@utils/colors' as *;
 
+@function em($pixels) {
+  @return #{$pixels/16}em
+}
+
 .text{
   font: 16px/26px Lato;
   margin: 0;
@@ -12,8 +16,9 @@
 }
 
 .header{
-  font: 40px/1.4 Fredoka_One;
+  font: em(40)/1.4 Fredoka_One;
   margin: 0;
+  letter-spacing: em(3.2);
   color: $whiteText;
   text-transform: uppercase;
 
