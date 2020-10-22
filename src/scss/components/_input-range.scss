@@ -1,0 +1,67 @@
+@use '@utils/colors' as *; 
+
+@mixin line-on-bg($color){
+  background: linear-gradient(180deg, rgba(2,0,36,0) 45%, rgba($color,1) 45%, rgba($color,1) 55%, rgba(0,0,0,0) 55%);
+}
+.input-range{
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  height: 25px; 
+  @include line-on-bg($soybean);
+  outline: none; 
+
+  @mixin slider-thumb($color){
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid $color;
+    border-radius: 100%;
+    cursor: pointer; 
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    @include slider-thumb($soybean);
+  }
+
+  &::-moz-range-thumb { 
+    @include slider-thumb($soybean);
+  }
+  
+  &_color_sesame{
+    @include line-on-bg($sesame);
+
+    &::-webkit-slider-thumb {
+      border: 2px solid $sesame;
+    }
+    &::-moz-range-thumb {
+      border: 2px solid $sesame;
+    }
+  }
+  &_color_wheat{
+    @include line-on-bg($wheat);
+
+    &::-webkit-slider-thumb {
+      border: 2px solid $wheat;
+    }
+    &::-moz-range-thumb {
+      border: 2px solid $wheat;
+    }
+  }
+  &_color_corn{
+    @include line-on-bg($corn);
+
+    &::-webkit-slider-thumb {
+      border: 2px solid $corn;
+    }
+    &::-moz-range-thumb {
+      border: 2px solid $corn;
+    }
+  }
+
+
+  &:hover {
+    opacity: 1;
+  }
+}

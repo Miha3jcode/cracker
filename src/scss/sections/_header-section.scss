@@ -1,0 +1,16 @@
+.header-section{
+  background: url(@img/header-bg.jpg) no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  
+
+  &__left-comment{
+    margin: 100px 0 20px 0;
+  }
+
+  &__central-container{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 440px;
+  }
+}

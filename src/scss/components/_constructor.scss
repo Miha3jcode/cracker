@@ -1,0 +1,44 @@
+@use '@utils/colors' as *; 
+
+.constructor{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+  &__row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &:first-child{
+      margin-bottom: 5px; 
+
+      .constructor__central-col{
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__central-col{
+    width: 620px;
+  }
+
+  &__text{
+    font: bold 24px Lato;
+    color: $darkGray;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__number{
+    font: 30px Lato;
+    color: $darkGray;
+  }
+
+  &__sum{
+    margin-left: 20px;
+  }
+}

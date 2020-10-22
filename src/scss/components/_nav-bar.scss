@@ -1,0 +1,39 @@
+@use '@utils/colors' as *; 
+
+.nav-bar{
+  padding: 36px 0 36px 0;
+  background: rgba($color:$darkGray, $alpha: 0.56) ;
+
+  &__central-container{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+  }
+
+  &__item{
+    display: inline-block;
+    padding: 16px 32px calc(12px + 4px) 32px;
+    font: 18px Fredoka_One;
+    color: $whiteText;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:first-child{
+      padding-left: 16px;
+    }
+    &:last-child{
+      padding-right: 16px;
+    }
+
+    &:hover{
+      border-bottom: 4px solid $primaryColor;
+      padding-bottom: 12px;
+    }
+  }
+}

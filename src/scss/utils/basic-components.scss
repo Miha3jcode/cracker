@@ -1,0 +1,80 @@
+@use '@utils/colors' as *;
+
+.text{
+  font: 16px/26px Lato;
+  margin: 0;
+  color: $clearWhiteText;
+  letter-spacing: 1px;
+
+  &_dark{
+    color: $darkText;
+  }
+}
+
+.header{
+  font: 40px/1.4 Fredoka_One;
+  margin: 0;
+  color: $whiteText;
+  text-transform: uppercase;
+
+  &_color_gray{
+    color: $grayText;
+  }
+
+  &_color_dark{
+    color: $darkText;
+  }
+}
+
+.logo-text{
+  font: 60px Kristi;
+  margin: 0;
+  color: $whiteText;
+
+  &_dark{
+    color: $darkText;
+  }
+}
+
+.link{
+  font: 14px Lato;
+  color: $clearWhiteText;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.icon-link{
+  display: flex;
+  align-items: center;
+
+  &__icon{
+    margin-right: 14px;
+  }
+}
+
+.icon-header{
+  display: flex;
+  align-items: center;
+
+  &__header{
+    margin-left: 20px;
+    font: 16px Fredoka_One;
+    color: $clearWhiteText;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+.logo{
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+
+  &__text{
+    position: absolute;
+    right: -13px;
+    bottom: -5px;
+
+    color: $whiteText;
+  }
+}

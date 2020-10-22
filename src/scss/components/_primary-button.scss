@@ -1,0 +1,14 @@
+@use '@utils/colors' as *;
+
+.primary-button{
+  font: 34px/80px Fredoka_One;
+  color: $clearWhiteText;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 6px 6px rgba($color: #000, $alpha: 0.12),  0px 6px 6px 0px rgba($color: #000, $alpha: 0.24) ;
+  padding: 0 50px;
+  background: $primaryColor;
+}

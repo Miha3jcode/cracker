@@ -1,0 +1,22 @@
+@use '@utils/colors' as *;
+
+.seed{
+  position: relative;
+  display: inline-block;
+
+  &__counter{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(56%,-36%);
+    display: inline-block;
+    font: 13px Lato;
+    margin: 0;
+    min-width: 13px;
+    text-align: center;
+    color: $clearWhiteText;
+    background: $primaryColor;
+    padding: 2px 4px 2px 3px;
+    border-radius: 100%;
+  }
+}

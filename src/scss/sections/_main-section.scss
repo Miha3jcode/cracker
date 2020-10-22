@@ -1,0 +1,18 @@
+.main-section{
+  position: relative;
+  padding-top: 420px;
+  padding-bottom: 60px;
+  background:  url('@img/mask.png') no-repeat 52% 155%, url('@img/main-bg.jpg') no-repeat 52% 155%;
+  
+  &__right-comment{
+    transform: translateY(-43%);
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  &__header{
+    text-align: center;
+    margin-bottom: 80px;
+  }
+}

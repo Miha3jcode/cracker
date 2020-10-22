@@ -74,7 +74,9 @@ module.exports = {
     extensions: ['.js', '.json'],
     alias: {
       '@fonts': path.resolve(__dirname, 'src/fonts'),
-      '@scss': path.resolve(__dirname, 'src/scss'),
+      '@utils': path.resolve(__dirname, 'src/scss/utils'),
+      '@sections': path.resolve(__dirname, 'src/scss/sections'),
+      '@components': path.resolve(__dirname, 'src/scss/components'),
       '@img': path.resolve(__dirname, 'src/img'),
     }
   },

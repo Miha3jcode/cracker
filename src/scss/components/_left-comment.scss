@@ -1,0 +1,39 @@
+@use '@utils/colors' as *; 
+
+.left-comment{
+  position: relative;
+
+  &__central-container{
+    display: flex; 
+    padding: 30px 0 64px 0;
+  }
+ 
+  &__text-container{
+    width: 332px;
+    border-right: 2px solid $clearWhiteText;
+    margin-right: 18px;
+    z-index: 1;
+  }
+
+  &__text{
+    margin-top: 130px;
+    text-align: right;
+    margin-right: 18px;
+  }
+
+  &__header{
+    max-width: 420px;
+    z-index: 1;
+    position: relative;
+  }
+
+  &__bg-block{
+    background-color: rgba($color: $green, $alpha: 0.87);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    margin-left: 34px;
+    top: 0;
+  }
+}

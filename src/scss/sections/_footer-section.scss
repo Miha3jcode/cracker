@@ -1,0 +1,24 @@
+@use '@utils/colors' as *;
+
+.footer-section{
+  padding-top: 50px;
+  padding-bottom: 490px;
+  background: url('img/footer-bg.jpg') no-repeat center/cover;
+
+  &__central-container{
+    display: flex;
+  }
+
+  &__icon-header{
+    margin-bottom: 36px;
+  }
+
+  &__icon-link{
+    margin-bottom: 22px;
+  }
+
+  &__text{
+    font: 14px/24px Lato;
+    color: $clearWhiteText;
+  }
+}
