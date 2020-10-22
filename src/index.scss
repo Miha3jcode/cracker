@@ -49,6 +49,15 @@ body{
   text-decoration: none;
 }
 
+.icon-link{
+  display: flex;
+  align-items: center;
+
+  &__icon{
+    margin-right: 14px;
+  }
+}
+
 .logo{
   position: relative;
   display: inline-block;
