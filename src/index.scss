@@ -2,7 +2,7 @@
 @import '@scss/colors.scss';
 
 body{
-  background: #888;
+  background: #fff;
   margin: 0;
 }
 
@@ -10,6 +10,7 @@ body{
   font: 16px/26px Lato;
   margin: 0;
   color: $clearWhiteText;
+  letter-spacing: 1px;
 
   &_dark{
     color: $darkText;
@@ -473,5 +474,24 @@ body{
 
   &__sum{
     margin-left: 20px;
+  }
+}
+
+.main-section{
+  position: relative;
+  padding-top: 420px;
+  padding-bottom: 60px;
+  background:  url('@img/mask.png') no-repeat 52% 155%, url('@img/main-bg.jpg') no-repeat 52% 155%;
+  
+  &__right-comment{
+    transform: translateY(-43%);
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  &__header{
+    text-align: center;
+    margin-bottom: 80px;
   }
 }
