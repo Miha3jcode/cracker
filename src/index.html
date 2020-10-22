@@ -123,55 +123,62 @@
     <div class="central-container main-section__constructor-container">
       <div class="constructor" id="constructor">
         <div class="constructor__row">
-          <div></div>
-          <div class="constructor__central-col">
+          <div class="col-1"></div>
+          <div class="constructor__central-col col-8">
             <p class="constructor__text">current value: <span class="constructor__number constructor__sum">143
                 &#8364;</span>
             </p>
           </div>
-          <div></div>
+          <div class="col-1"></div>
         </div>
         <div class="constructor__row">
-          <img src="img/soybean.svg" alt="soybean">
-          <input class="input-range constructor__central-col" type="range" name="soybean" min="0" max="100">
-          <span class="constructor__number" data-grain-type='soybean'>10%</span>
+          <div class="col-1"><img src="img/soybean.svg" alt="soybean"></div>
+          <input class="input-range constructor__central-col col-8" type="range" name="soybean" min="0" max="100">
+          <div class="col-1">
+            <p class="constructor__number" data-grain-type='soybean'>10%</p>
+          </div>
         </div>
         <div class="constructor__row">
-          <img src="img/sesame.svg" alt="sesame">
-          <input class="input-range input-range_color_sesame constructor__central-col " type="range" name="sesame"
+          <div class="col-1"><img src="img/sesame.svg" alt="sesame"></div>
+          <input class="input-range input-range_color_sesame constructor__central-col col-8" type="range" name="sesame"
             min="0" max="100">
-          <span class="constructor__number" data-grain-type='sesame'>10%</span>
+          <div class="col-1">
+            <p class="constructor__number" data-grain-type='sesame'>10%</p>
+          </div>
         </div>
         <div class="constructor__row">
-          <img src="img/wheat.svg" alt="wheat">
-          <input class="input-range input-range_color_wheat constructor__central-col " type="range" name="wheat" min="0"
-            max="100">
-          <span class="constructor__number" data-grain-type='wheat'>10%</span>
+          <div class="col-1"><img src="img/wheat.svg" alt="wheat"></div>
+          <input class="input-range input-range_color_wheat constructor__central-col col-8" type="range" name="wheat"
+            min="0" max="100">
+          <div class="col-1">
+            <p class="constructor__number" data-grain-type='wheat'>10%</p>
+          </div>
         </div>
         <div class="constructor__row">
-          <img src="img/corn.svg" alt="corn">
-          <input class="input-range input-range_color_corn constructor__central-col " type="range" name="corn" min="0"
-            max="100">
-          <span class="constructor__number" data-grain-type='corn'>10%</span>
+          <div class="col-1"><img src="img/corn.svg" alt="corn"></div>
+          <input class="input-range input-range_color_corn constructor__central-col col-8" type="range" name="corn"
+            min="0" max="100">
+          <div class="col-1">
+            <p class="constructor__number" data-grain-type='corn'>10%</p>
+          </div>
         </div>
         <div class="constructor__row">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59" height="59"
-            viewBox="0 0 59 59">
-            <metadata>
-              <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-              <x:xmpmeta xmlns:x="adobe:ns:meta/"
-                x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
-                <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-                  <rdf:Description rdf:about="" />
-                </rdf:RDF>
-              </x:xmpmeta>
-              <?xpacket end="w"?>
-            </metadata>
-            <image id="pacage" width="59" height="59"
-              xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA7CAQAAABvLDo4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkChMXCzJ7Vy5aAAAHVElEQVRYw7XZe2zW1R3H8ddz6Y1iCxQRGgQnSMVIZaK2zhWKbjCdeNuQrDBvuEVRZrZxictMlowwnLrhpnFjm0NBaIhkuIszgLMK2arDym0irYi3oUKwpUAvtH2e/dGWXp4rQz9Nk+c553vO+3vO73y/5/zOE5gkLYXlGegClyk2zmh5J2uOeF+tnV7zpmMatafTXSANbK5BSn3LDJk4oVmLNu2iAsIyZMvpqvmLNV7V4PjpYnMNc7v5Bulw2AFb1ahT55OTFsONdZ6LlRmhQEiDX3nKJ8nRybBhw82zUFi9Os9a572kLp5jppnGGqzdzz3h48QTnhibb5rlCtWr9pCX0nliYKqFSgxxwH02OXJq2LMsc5tmNe63JW1kt75smYvlWGmxg+ligy6yVpGP/MyvTxnZrfl+ZLi9KmwXSY0NudxzhtimQt3/DYXzPONSn7pOtY7k2KCv2iBsgzlau23kCommgEQFtGnuU5blGddrc6NNfUfcH3u5jbKs9N1ejlzqVoOTpoGANm0G2G2FT/vV/dYdWkzzr8TY8bYYbKW5vcpKVGtOmXtyBR0zwMumxdj+0S0Om+yt+NgzbFXseTdo69Vou4uU+kQgCTToXvNNNMuPFdvVrzbTn1xju8mOdheF9Xx6RLFaFX2gjBZR068sHjhit/H0ytbdOqHCNhM9Yl73TARPVl7lVk0qNMb4+lEv5+Ir7CuOo8BBx+LUN6rQ5FZX9XjZqRzLZVpie78VGxDwTmzcxYz1fG9jpcl2x6mPesNSmX4ppy92njHqPN4/vpwp5A3tCrobIN+QXnMxVEBY0PtodSCBi+0eU2esu3tjs80TsiDOrlEkbK1B/mmRLJBnlSr5Xe1me12xKA5hoo3OSTAjxywQMq+zl07sXCPt8mLMWBknYIpahX7iBhnyrDNNkd/LluluTyrwsuvwgYAFSv0gAbbDi3Y72x3d2JC5Mi11Io7xuTosEzDLOypdq1K5O93vmxb4jl/YYKaQSu02yzZDh7u6ZiVWrZbKNFeoM24vslWrMXE3qZeU2WeqAwq8aZhWd1qNSrOwxmzcZLWAHOVestGV7rEiAXiQOlnK7AgVskC5FTbFjc0x2pRoEdFso/EWWgeedZkqt4M9mrVZ7wXtJnrAFR5OgA0aaopjNgUmhdWYoNyWhGFSarqlKRPGFFW+71F/MMcEexNgy1TZ5eLApGJVsoxyOEF3Aa0y5GhJCg37s6lGOWSog7aanMCuwAdalQddIceWJGMZg9+k3AoKXe1Vh3BUrRLZCezavCLb5UETZNuRBPu4DItSYINmiXoQQW1+KNN9CbE1sk0IGoe340Rs9xRP8WkaG8Etmv1dpsuEvCLirgSW7faiKGwUahOOZoiAtSIIGdhr4+jp5iiyXWgzrrVeiR1qjUrQX4f3MDJsCA4lXMVfFPaKDoyz0Zn97IK2KdduBGpRqEOuDv/oCq1YRRxBXlgeMZtdj4YJOiKKoAMaYrD1oshBE5oEtImqT3IoOIozwsIkWTCBrn/+oySJjaSnj946jtygE8hMaBQhzhPtr2g/bLIWeWgMasCgND39LHQGjgYdxvA0RkSmrJi/VMed/goajCNh77pAkaq4217fyZlnaJ8IDgh705OnhA05F++FveVq5wmnxI73gIyY0oinEqaaeMowHnvCtmt2aZwO++s1JQb0C6CQj3SkvYY7sSWa7AirdkypgYneRE8qGvdMeKoaqNRB1UF19mOS0GfQaSqFTMJ+dUE8J2JWrwPp56cBZol4rjOwKzWYGecl4rNXvpnqVXZi99slw41pLKvTUydjp/3daWyFJou6jtynowGiSZzPt1BT56myE7vGPqPclCQ3p6cPtWhKUJfpBmfbp7IHy8OaLTXsNLEbjLUtQaI9yzLHPdT5pdvkaTUKLDLgNMEfJ8hZuRYrUGNVXyzzHTbf1FNO7kh5nRI21T0O+153QQ/2Dcu1Wm10TKOjKTqNaqTPHU3/N8fRVmvxqO09fvRoiS+52nrTe11kBkUVyk+adyNGYaihXas4ZESf8Q+3Xr6/+WlPUd+bmsG2usALKtR3lVT4XVrPu0Owj2sNBnd9GmKN6XYr09B71nur3gybfc0q3+4Cb/aIETKSPr2AdvWy5HZZBTR79yT0adPtd31vaLzLv2J/dbZqN/sw5VJJroCR1in1vhl29q2KjbGdrrRHqVeVnVa6zDBZtVJ7XNkfGv+M97ZyWw3zsiXyTmkT7xlnviWqnGWLcvtiDUKF8Zodt9JAk0wx23/Vpbwg6ovM9A0bXKPFo+bEvadKemlf6jEThezyoPVOiKZ41gEBWW6y2ATtdrhXdULTFD9RzLPYSEEHrVXpdR2ixFyZERByiZvNdqaIDy3zRFIPU/4gk+E29zlfUEC9Lf6t1lsOO65RnlxDFSlyickGiYrYa7mVqV5N0/kdCC4xx9d9QVC8t50oIt7xvFVeT6e7dLGdk3mOMhcqMla+gfI0OqbBPnvttsW76cf5/wAiVR92hZ7E8wAAAABJRU5ErkJggg==" />
-          </svg>
-
-          <div class="constructor__central-col">
+          <div class="col-1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="59" height="59" viewBox="0 0 59 59">
+              <metadata>
+                <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/"
+                  x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+                  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:Description rdf:about="" />
+                  </rdf:RDF>
+                </x:xmpmeta>
+                <?xpacket end="w"?>
+              </metadata>
+              <image id="pacage" width="59" height="59"
+                xlink:href="data:img/png;base64,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" />
+            </svg></div>
+          <div class="constructor__central-col col-8">
             <select name="packs" class="select">
               <option value="" disabled selected hidden class="select__placeholder">Choose your pack</option>
               <option value="volvo" class="select__item">small pack</option>
@@ -179,7 +186,7 @@
               <option value="opel" class="select__item">large pack</option>
             </select>
           </div>
-          <div></div>
+          <div class="col-1"></div>
         </div>
         <div class="add-button">
           <button class="add-button__text">Add to cart</button>

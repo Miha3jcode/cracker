@@ -22,10 +22,6 @@
     }
   }
 
-  &__central-col{
-    width: 620px;
-  }
-
   &__text{
     font: bold 24px Lato;
     color: $darkGray;
@@ -36,6 +32,8 @@
   &__number{
     font: 30px Lato;
     color: $darkGray;
+    text-align: right;
+    margin: 0;
   }
 
   &__sum{
