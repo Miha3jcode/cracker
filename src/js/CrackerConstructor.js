@@ -1,14 +1,17 @@
 class CrackerConstructor {
-  constructor(crackerConstructor, grains) {
+  constructor(crackerConstructor, grainsInfo) {
     this.crackerConstructor = crackerConstructor;
-    this.grains = grains;
+    this.grains = grainsInfo.map(g => g.name);
 
-    this.inputs = grains
-      .map(name => ({
-        name,
-        node: crackerConstructor.querySelector(`input[name=${name}]`),
-        label: crackerConstructor.querySelector(`[data-grain-type=${name}]`),
-        value: 0
+    const sum = grainsInfo.reduce((sum, g) => sum + g.default, 0);
+    if (sum !== 100) throw new Error('default sum must be 100!');
+
+    this.inputs = grainsInfo
+      .map(g => ({
+        name: g.name,
+        node: crackerConstructor.querySelector(`input[name=${g.name}]`),
+        label: crackerConstructor.querySelector(`[data-grain-type=${g.name}]`),
+        value: g.default
       }));
     this._update();
 
@@ -19,25 +22,29 @@ class CrackerConstructor {
   _onChangeHandler(event) {
     const { name, value } = event.target;
 
-    const maxValue = this._getMaxInputValue(name);
+    if (this.grains.find(g => g === name)) {
+      const maxValue = this._getMaxInputValue(name);
 
-    const newValue = value < maxValue ? value : maxValue;
+      const newValue = value < maxValue ? value : maxValue;
 
-    this._setValue(name, newValue);
-    event.target.value = newValue;
-    this._calcAndSetLastInputValue();
-    this._update();
+      this._setValue(name, newValue);
+      event.target.value = newValue;
+      this._calcAndSetLastInputValue();
+      this._update();
+    }
   }
 
   _onMoveThumbHandler(event) {
     const { name, value } = event.target;
 
-    const maxValue = this._getMaxInputValue(name);
+    if (this.grains.find(g => g === name)) {
+      const maxValue = this._getMaxInputValue(name);
 
-    const newValue = value < maxValue ? value : maxValue;
+      const newValue = value < maxValue ? value : maxValue;
 
-    event.target.value = newValue;
-    this._updateLabel(name, newValue);
+      event.target.value = newValue;
+      this._updateLabel(name, newValue);
+    }
   }
 
   _update() {
