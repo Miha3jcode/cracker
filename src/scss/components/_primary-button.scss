@@ -13,4 +13,15 @@ $fz: 34;
   box-shadow: 0px 0px em(6,$fz) em(6,$fz) rgba($color: #000, $alpha: 0.12),  0px em(6,$fz) em(6,$fz) 0px rgba($color: #000, $alpha: 0.24) ;
   padding: 0 em(54,$fz);
   background: $primaryColor;
+  transition: all 0.3s ease-in-out;
+  transition-property: color, background;
+
+
+  &:hover{
+    color: $primaryColor;
+    background: $clearWhiteText;
+    border: em(4,$fz) solid $primaryColor;
+    line-height: #{ 2.4 - toEm(4,$fz)*2 }em;
+    padding: 0 em(50,$fz);
+  }
 }
