@@ -66,10 +66,6 @@ class CrackerConstructor {
   _setValue(name, value) {
     this.inputs.find(i => i.name === name).value = value;
   }
-  /*
-    _getValue(name) {
-      return this.inputs.find(i => i.name === name).value;
-    }*/
 
   // gives rest percents to last input and animates their changing
   _calcAndSetLastInputValue() {
@@ -82,7 +78,6 @@ class CrackerConstructor {
     const lastInput = this.inputs
       .find(i => i.name === lastInputName)
       .node;
-    console.log(newValue);
 
     if (this.lastInputAnimationInterval) {
       clearInterval(this.lastInputAnimationInterval);

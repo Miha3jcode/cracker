@@ -4,6 +4,7 @@
   position: relative;
   padding-bottom: em(43);
   background:  url('@img/mask.png') no-repeat 52% 155%, url('@img/main-bg.jpg') no-repeat 52% 155%;
+  box-shadow:  0px em(4) em(8) 0px rgba($color: #000, $alpha: 0.24) ;
   
   &__right-comment{
     transform: translateY(em(-182));

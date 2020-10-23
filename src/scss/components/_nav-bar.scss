@@ -3,6 +3,8 @@
 .nav-bar{
   padding: em(32) 0 em(36) 0;
   background: rgba($color:$darkGray, $alpha: 0.56) ;
+  box-shadow:  0px em(4) em(8) 0px rgba($color: #000, $alpha: 0.24) ;
+
 
   &__central-container{
     display: flex;
