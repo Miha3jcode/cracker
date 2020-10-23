@@ -1,14 +1,16 @@
-@use '@utils/colors' as *;
+@use '@utils/utils' as *;
+
+$fz: 34;
 
 .primary-button{
-  font: 34px/80px Fredoka_One;
+  font: em($fz)/2.4 Fredoka_One;
   color: $clearWhiteText;
   text-transform: uppercase;
-  border-radius: 50px;
+  border-radius: em(50,$fz);
   cursor: pointer;
   border: none;
   outline: none;
-  box-shadow: 0px 0px 6px 6px rgba($color: #000, $alpha: 0.12),  0px 6px 6px 0px rgba($color: #000, $alpha: 0.24) ;
-  padding: 0 50px;
+  box-shadow: 0px 0px em(6,$fz) em(6,$fz) rgba($color: #000, $alpha: 0.12),  0px em(6,$fz) em(6,$fz) 0px rgba($color: #000, $alpha: 0.24) ;
+  padding: 0 em(54,$fz);
   background: $primaryColor;
 }

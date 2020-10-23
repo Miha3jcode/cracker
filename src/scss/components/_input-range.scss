@@ -1,26 +1,44 @@
-@use '@utils/colors' as *; 
+@use '@utils/utils' as *; 
 
 @mixin line-on-bg($color){
-  background: linear-gradient(180deg, rgba(2,0,36,0) 45%, rgba($color,1) 45%, rgba($color,1) 55%, rgba(0,0,0,0) 55%);
+  //background: linear-gradient(180deg, rgba(2,0,36,0) 45%, rgba($color,1) 45%, rgba($color,1) 55%, rgba(0,0,0,0) 55%);
 }
 .input-range{
-  -webkit-appearance: none;  /* Override default CSS styles */
+  font-size:  em(16);
+  -webkit-appearance: none;
   appearance: none;
-  height: 25px; 
+  height: em(25); 
   @include line-on-bg($soybean);
   outline: none; 
+  position: relative;
+  background: none;
+
+  &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: em(4);
+    border-radius: em(4);
+    background-color: $soybean;
+  }
 
   @mixin slider-thumb($color){
-    width: 40px;
-    height: 40px;
+    width: em(40);
+    height: em(40);
     box-sizing: border-box;
-    border: 2px solid $color;
+    border: em(2) solid $color;
     border-radius: 100%;
+    background: rgba($color: #fff, $alpha: 0.9);
     cursor: pointer; 
+    position: relative;
+    z-index: 1;
   }
 
   &::-webkit-slider-thumb {
-    -webkit-appearance: none;
     appearance: none;
     @include slider-thumb($soybean);
   }
@@ -30,33 +48,39 @@
   }
   
   &_color_sesame{
-    @include line-on-bg($sesame);
+    &::after{
+      background-color: $sesame;
+    }
 
     &::-webkit-slider-thumb {
-      border: 2px solid $sesame;
+      border: em(2) solid $sesame;
     }
     &::-moz-range-thumb {
-      border: 2px solid $sesame;
+      border: em(2) solid $sesame;
     }
   }
   &_color_wheat{
-    @include line-on-bg($wheat);
+    &::after{
+      background-color: $wheat;
+    }
 
     &::-webkit-slider-thumb {
-      border: 2px solid $wheat;
+      border: em(2) solid $wheat;
     }
     &::-moz-range-thumb {
-      border: 2px solid $wheat;
+      border: em(2) solid $wheat;
     }
   }
   &_color_corn{
-    @include line-on-bg($corn);
+    &::after{
+      background-color: $corn;
+    }
 
     &::-webkit-slider-thumb {
-      border: 2px solid $corn;
+      border: em(2) solid $corn;
     }
     &::-moz-range-thumb {
-      border: 2px solid $corn;
+      border: em(2) solid $corn;
     }
   }
 

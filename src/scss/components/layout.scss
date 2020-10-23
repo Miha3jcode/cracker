@@ -1,5 +1,6 @@
 .page{
   background: #fff;
+  min-width: 320px;
   margin: 0;
 }
 
@@ -9,12 +10,3 @@
   margin: 0 auto;
 }
 
-.col-8{
-  width: calc(100% / 12 * 8);
-}
-.col-4{
-  width: calc(100% / 3);
-}
-.col-1{
-  width: calc(100% / 12);
-}

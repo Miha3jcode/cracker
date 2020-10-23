@@ -1,4 +1,4 @@
-@use '@utils/colors' as *;
+@use '@utils/utils' as *;
 
 
 .right-comment{
@@ -17,7 +17,8 @@
   }
 
   &__cracker{
-    width: 380px;
+    width: em(380);
+    max-width: 100%;
     position: absolute;
     left: 0;
     z-index: -1;
@@ -31,16 +32,21 @@
   }
 
   &__header{
-    margin-bottom: 44px;
-    margin-top: -12px;
+    margin-bottom: em(20);
+    margin-top: em(-6);
+    letter-spacing: em(4.4);
   }
 
   &__text-container{
-    width: 620px;
     max-width: 100%;
-    padding: 30px 80px 76px 80px;
+    box-sizing: border-box;
+    padding: em(30) em(80) em(58) em(80);
     position: relative;
-    
+  }
+
+  &__text{
+    width: auto;
+    max-width: em(620, 18);
   }
 
   &__logo-text{
@@ -58,5 +64,25 @@
     z-index: -1;
     width: 200%;
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .right-comment{
+    &__cracker{
+      transform: translateY(em(40));
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .right-comment{
+    &__text-container{
+      padding: em(20) em(20) em(50) em(20);
+    }
+
+    &__cracker{
+      transform: translateY(em(100));
+    }
   }
 }

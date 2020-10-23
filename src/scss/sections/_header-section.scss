@@ -1,16 +1,43 @@
+@use '@utils/utils' as *;
+
 .header-section{
   background: url(@img/header-bg.jpg) no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   
+  &__top-line{
+    font-size: em(16);
+  }
 
   &__left-comment{
-    margin: 100px 0 20px 0;
+    margin: 5.2% 0 em(20) 0;
+  }
+
+  &__primary-button{
+    margin-right: em(10);
   }
 
   &__central-container{
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 440px;
+    padding-bottom: em(440);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header-section{
+    font-size: calc(#{em(16)} * 16/18 );
+
+    &__central-container{
+      padding-bottom: em(280);
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .header-section{
+    &__primary-button{
+      font-size: em(30);
+    }
   }
 }

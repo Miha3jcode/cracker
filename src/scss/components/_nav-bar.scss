@@ -1,7 +1,7 @@
-@use '@utils/colors' as *; 
+@use '@utils/utils' as *; 
 
 .nav-bar{
-  padding: 36px 0 36px 0;
+  padding: em(32) 0 em(36) 0;
   background: rgba($color:$darkGray, $alpha: 0.56) ;
 
   &__central-container{
@@ -13,27 +13,38 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    display: inline;
   }
 
   &__item{
+    $fz: 18;
+
     display: inline-block;
-    padding: 16px 32px calc(12px + 4px) 32px;
-    font: 18px Fredoka_One;
+    padding: em(14, $fz) em(32, $fz) em(14, $fz) em(32, $fz);
+    font: em(18) Fredoka_One;
     color: $whiteText;
     text-transform: uppercase;
     text-decoration: none;
 
     &:first-child{
-      padding-left: 16px;
+      padding-left: em(16, $fz);
     }
     &:last-child{
-      padding-right: 16px;
+      padding-right: em(16, $fz);
     }
 
     &:hover{
-      border-bottom: 4px solid $primaryColor;
-      padding-bottom: 12px;
+      border-bottom: em(4, $fz) solid $primaryColor;
+      padding-bottom: em(10, $fz);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav-bar{
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
   }
 }

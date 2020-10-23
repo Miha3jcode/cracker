@@ -1,24 +1,35 @@
-@use '@utils/colors' as *;
+@use '@utils/utils' as *;
 
+$fz:22;
 .select{
-  font: 22px Fredoka_One;
+  font: em($fz) Fredoka_One;
   color: $primaryColor;
   text-transform: uppercase;
-  padding: 20px 80px;
+  padding: em(14,$fz) em(80,$fz);
   box-sizing: border-box;
-  border: 1px solid $primaryColor;
-  border-radius: 41px;
+  border: em(1,$fz) solid $primaryColor;
+  border-radius: em(41,$fz);
   background: url("/img/angle-down-red.svg") no-repeat right 9% top 53%;
+  background-size: em(20,$fz);
   outline: none;
+  letter-spacing: em(1.5,$fz);
   position: relative;
   appearance: none;  
-  scrollbar-width: none;
 
   &__item{
-    font: 22px Avenir;
+    font: inherit Avenir;
     color: $primaryColor;
     text-transform: uppercase;
-    padding: 20px 20px;
+    padding: em(20,$fz) em(20,$fz) ;
     background: rgba($color: #fff, $alpha: 0.95);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .select{
+    letter-spacing: em(0,$fz);
+    padding-left: em(20,$fz);
+    padding-right: em(60,$fz);
+    background-position: right 7% top 53%;
   }
 }

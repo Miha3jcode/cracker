@@ -33,7 +33,22 @@ function cssLoaders(extra) {
       hmr: isDev,
       reloadAll: true
     }
-  }, 'css-loader'];
+  }, 'css-loader',
+  {
+    loader: 'postcss-loader',
+    options: {
+      postcssOptions: {
+        plugins: [
+          [
+            'postcss-preset-env',
+            {
+              // Options
+            },
+          ],
+        ],
+      },
+    }
+  }];
 
   if (extra) loaders.push(extra);
 

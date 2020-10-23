@@ -1,24 +1,20 @@
-@use '@utils/colors' as *;
-
-@function em($pixels) {
-  @return #{$pixels/16}em
-}
+@use '@utils/utils' as *;
 
 .text{
-  font: 16px/26px Lato;
+  font: em(18)/1.5 Lato;
   margin: 0;
   color: $clearWhiteText;
-  letter-spacing: 1px;
+  letter-spacing: em(1);
 
   &_dark{
-    color: $darkText;
+    color: $darkText; 
   }
 }
 
 .header{
-  font: em(40)/1.4 Fredoka_One;
+  font: em(44)/1.4 Fredoka_One;
   margin: 0;
-  letter-spacing: em(3.2);
+  letter-spacing: em(1.8);
   color: $whiteText;
   text-transform: uppercase;
 
@@ -31,8 +27,16 @@
   }
 }
 
+@media screen and (max-width: 560px) {
+  .header{
+      font-size: em(30);
+      letter-spacing: em(2);
+    }
+  
+}
+
 .logo-text{
-  font: 60px Kristi;
+  font: em(60) Kristi;
   margin: 0;
   color: $whiteText;
 
@@ -54,6 +58,7 @@
 
   &__icon{
     margin-right: 14px;
+    min-width: em(50);
   }
 }
 
@@ -77,8 +82,8 @@
 
   &__text{
     position: absolute;
-    right: -13px;
-    bottom: -5px;
+    right: em(-15);
+    bottom: em(-5);
 
     color: $whiteText;
   }

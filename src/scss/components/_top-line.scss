@@ -1,4 +1,4 @@
-@use '@utils/colors' as *;
+@use '@utils/utils' as *;
 
 .top-line{
   background: $darkGray;
@@ -6,7 +6,7 @@
   &__logo{
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0.8%;
     transform: translate(0, 36%);
   }
 
@@ -22,11 +22,11 @@
   }
 
   &__seed{
-    margin: 15px 80px 15px 0;
+    margin: em(15) em(86) em(15) 0;
   }
   
   &__text{
-    font: bold 14px Lato ;
+    font: bold em(14) Lato ;
     color: $clearWhiteText;
     text-transform: uppercase;
     margin: 0;
@@ -35,17 +35,32 @@
   }
 
   &__sum{
-    font: 16px Lato;
-    margin-left: 26px;
+    font: em(19) Lato;
+    margin-left: em(28);
+    letter-spacing: em(2);
   }
 
   &__details{
-    //align-self: stretch;
+    align-self: stretch;
     cursor: pointer;
-    margin-left: 52px;
-    padding-right: 38px;
-    background: url('@img/angle-down.svg') (no-repeat right 8px center)/16px;
+    margin-left: em(54);
+    padding-right: em(54);
+    background: url('@img/angle-down.svg') (no-repeat right em(20) center)/em(16);
     display: flex;
     align-items: center;
+  }
+}
+
+
+@media screen and (max-width: 560px) {
+  .top-line{
+    &__seed{
+      margin: em(40) em(15) em(40) 0;
+    }
+
+    &__order-data{
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 }

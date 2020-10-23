@@ -1,18 +1,25 @@
+@use '@utils/utils' as *;
+
 .main-section{
   position: relative;
-  padding-top: 420px;
-  padding-bottom: 60px;
+  padding-bottom: em(43);
   background:  url('@img/mask.png') no-repeat 52% 155%, url('@img/main-bg.jpg') no-repeat 52% 155%;
   
   &__right-comment{
-    transform: translateY(-43%);
-    position: absolute;
+    transform: translateY(em(-182));
     width: 100%;
-    top: 0;
   }
 
   &__header{
+    margin-top: em(-16);
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: em(24);
+    letter-spacing: em(4.4);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main-section{
+    font-size: calc(#{em(16)} * 16/18 );
   }
 }

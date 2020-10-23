@@ -1,7 +1,7 @@
-@use '@utils/fonts';
-@use '@utils/layout';
-@use '@utils/basic-components';
+@use '@utils/utils';
 
+@use '@components/layout';
+@use '@components/basic-components';
 @use '@components/left-comment';
 @use '@components/primary-button';
 @use '@components/right-comment';

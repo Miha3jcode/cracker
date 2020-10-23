@@ -1,12 +1,14 @@
-@use '@utils/colors' as *; 
+@use '@utils/utils' as *; 
 
+$fz: 22;
 .add-button{
   display: inline-block;
   position: relative;
 
   &:hover{
     .add-button__text{
-      width: 220px;
+      width: em(220, $fz);
+      box-shadow: 0px 0px em(6,$fz) em(6,$fz) rgba($color: #000, $alpha: 0.12),  0px em(6,$fz) em(6,$fz) 0px rgba($color: #000, $alpha: 0.24);
     }
 
     .add-button__plus{
@@ -15,28 +17,46 @@
   }
 
   &__text{
-    font: 22px Fredoka_One;
+    font: em(22) Fredoka_One;
     color: $clearWhiteText;
-    padding: 0 26px;
+    padding: 0 em(26,$fz);
     text-transform: uppercase;
     overflow: hidden;
-    transition: width 0.3s ease-in-out;
-    width: 60px;
+    transition: width  0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: em(60,$fz);
+    height: em(60,$fz);
     white-space: nowrap;
+    border-radius: em(60,$fz);
+    box-shadow: none;
+
   }
   &__plus{
-    width: 60px;
+    top: 0;
+    font-size: em(16);
+    width: em(60);
+    height: em(60);
     padding: 0;
     position: absolute;
+    box-shadow: 0px 0px em(6) em(6) rgba($color: #000, $alpha: 0.12),  0px em(6) em(6) 0px rgba($color: #000, $alpha: 0.24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: 0;
+    border-radius: em(60);
   }
   &__text,&__plus{
-    height: 60px;
     background: none;
     border: none;
     background: $primaryColor;
-    box-shadow: 0px 0px 6px 6px rgba($color: #000, $alpha: 0.12),  0px 6px 6px 0px rgba($color: #000, $alpha: 0.24);
-    border-radius: 60px;
     outline: none;
+  }
+}
+
+@keyframes toggle-add-button{
+  from{
+    //width: em(60,$fz);
+  }
+  to{
+    width: em(220, $fz);
   }
 }
