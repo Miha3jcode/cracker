@@ -36,7 +36,7 @@
 }
 
 .logo-text{
-  font: em(60) Kristi;
+  font: italic em(60) Kristi;
   margin: 0;
   color: $whiteText;
 
@@ -79,6 +79,10 @@
   position: relative;
   display: inline-block;
   text-decoration: none;
+
+  &__logo-text{
+    font-style: normal;
+  }
 
   &__text{
     position: absolute;
