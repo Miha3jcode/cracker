@@ -32,7 +32,7 @@
       padding-right: em(16, $fz);
     }
 
-    &:hover{
+    &:hover, &_item{
       border-bottom: em(4, $fz) solid $primaryColor;
       padding-bottom: em(10, $fz);
     }
