@@ -47,9 +47,12 @@ class CrackerConstructor {
     }
   }
 
+  // updates all input except the last one (but updates it's label)
   _update() {
     this.inputs.forEach(i => {
-      i.node.value = i.value;
+      if (i.name !== this.grains[this.grains.length - 1]) {
+        i.node.value = i.value;
+      }
       i.label.innerHTML = i.value + '%';
     });
   }
@@ -63,15 +66,43 @@ class CrackerConstructor {
   _setValue(name, value) {
     this.inputs.find(i => i.name === name).value = value;
   }
+  /*
+    _getValue(name) {
+      return this.inputs.find(i => i.name === name).value;
+    }*/
 
-  // gives rest percents to last input
+  // gives rest percents to last input and animates their changing
   _calcAndSetLastInputValue() {
+    const lastInputName = this.grains[this.grains.length - 1];
     const otherInputsSum = this.inputs
-      .filter(i => i.name !== this.grains[this.grains.length - 1])
+      .filter(i => i.name !== lastInputName)
       .reduce((sum, i) => sum + +i.value, 0);
-    this.inputs
-      .find(i => i.name === this.grains[this.grains.length - 1])
-      .value = 100 - otherInputsSum;
+
+    const newValue = 100 - otherInputsSum;
+    const lastInput = this.inputs
+      .find(i => i.name === lastInputName)
+      .node;
+    console.log(newValue);
+
+    if (this.lastInputAnimationInterval) {
+      clearInterval(this.lastInputAnimationInterval);
+      this.lastInputAnimationInterval = null;
+    }
+
+    this._setValue(lastInputName, newValue);
+
+    this.lastInputAnimationInterval = setInterval(() => {
+      if (lastInput.value > newValue) {
+        lastInput.stepDown();
+      }
+      else if (lastInput.value < newValue) {
+        lastInput.stepUp();
+      }
+      else {
+        clearInterval(this.lastInputAnimationInterval);
+        this.lastInputAnimationInterval = null;
+      }
+    }, 10);
   }
 
   // returns max possible value without taking account of last input
