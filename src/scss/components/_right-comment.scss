@@ -47,6 +47,8 @@
   &__text{
     width: auto;
     max-width: em(620, 18);
+    text-align: justify;
+    text-indent: em(38, 18);
   }
 
   &__logo-text{
