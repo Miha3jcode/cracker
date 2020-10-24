@@ -14,6 +14,9 @@ class CrackerConstructor {
         value: g.default
       }));
     this._update();
+    const lastInput = this.inputs
+      .find(i => i.name === this.grains[this.grains.length - 1]);
+    lastInput.node.value = lastInput.value;
 
     crackerConstructor.addEventListener('change', this._onChangeHandler.bind(this));
     crackerConstructor.addEventListener('input', this._onMoveThumbHandler.bind(this));
