@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 22.958 20.088">
+<defs>
+    <style>
+      .cls-1 {
+        font-size: 51.594px;
+        fill: #333;
+        text-anchor: middle;
+        font-family: Avenir;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <text id="cancel" class="cls-1" transform="matrix(0.658, 0.658, -0.658, 0.658, 0.125, 21.444)"><tspan x="0">+</tspan></text>
+</svg>

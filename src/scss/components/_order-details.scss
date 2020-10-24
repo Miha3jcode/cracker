@@ -2,11 +2,16 @@
 
 .order-details{
   background:$detailsWhite;
+  position: relative;
+  display: inline-block;
+  box-shadow: 0px em(24) em(48) 0px   rgba($color: #000, $alpha: 0.3), 0px em(24) em(24) 0px   rgba($color: #000, $alpha: 0.22);
 
   &__container{
-    position: relative;
-    padding: em(20) em(90) em(20) em(100);
-
+    $ct: 940;
+    max-width: 100%;
+    //padding: em(20) em(90) em(20) em(100);
+    padding: em(20) pr(115, $ct) em(20) pr(110, $ct);
+    overflow: auto;
   }
 
   &__close-icon{
@@ -15,6 +20,8 @@
     right:em(30);
     width: em(20);
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    user-select: none;
 
     &:hover{
       transform: rotate(90deg);
@@ -27,43 +34,68 @@
     float: left;
   }
 
+  .sesame-svg, .wheat-svg, .soybean-svg, .corn-svg{
+    fill:$darkText;
+  }
+
+  .wheat-svg{
+    fill:red;
+  }
+
   &__table{
     border-collapse: collapse;
-    margin-bottom: em(28);
+    margin-bottom: em(32);
   }
 
   &__grain-col{
-    height: em(42);
-    width: em(60);
+    height: em(44);
+    width: em(60.5);
+    padding: 0;
+    padding-left: em(5);
+
   }
 
   &__numbers-col{
     width: em(70);
+    min-width: em(70);
+    padding: 0;
 
     &:last-child{
       text-align: right;
       padding-bottom: 0;
+    }
+
+    &_empty{
+      min-width: 0;
     }
   }
 
   &__grain-col, &__numbers-col{
     vertical-align: bottom;
     box-sizing: border-box;
-    padding: 0;
     padding-bottom: em(5);
+    border-bottom: em(2) solid rgba($color: #000000, $alpha: 0.1);
   }
 
   &__seed-col{
+    width: em(64);
     padding: 0;
     vertical-align: bottom;
   }
 
-  &__delete-icon{
-    width: em(30);
+  &__delete-col{
+    min-width: em(72);
+    width: em(72);
+    height: em(45);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0;
   }
 
-  &__row{
-    border-bottom: em(2) solid rgba($color: #000000, $alpha: 0.1);
+  &__delete-icon{
+    width: em(30);
+    cursor: pointer;
   }
 
   &__numbers{
@@ -83,6 +115,59 @@
   }
 
   &__primary-button{
-    font-size: em(18);
+    font-size: em(17);
+  }
+
+  &__bottom-row{
+    float: right;
+    display: flex;
+    align-items: center;
+    width: em(312);
+    justify-content: space-between;
+    transform: translateX(em(10));
+  }
+
+  $sum-fz:18;
+  &__sum{
+    font: bold em($sum-fz) Lato;
+    color: $darkText;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: em(0.5,$sum-fz);
+  }
+  &__sum-number{
+    font: em(24, $sum-fz) Lato;
+    letter-spacing: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .order-details{
+    &__container{
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+
+    &__seed-col{
+      display: none;
+    }
+
+    &__header-col{
+      &:first-child{
+        display: none;
+      }
+    }
+
+    &__bottom-row{
+      transform: none;
+    }
+    
+    &__delete-col{
+      width: em(50);
+    }
+
+    &__close-icon{
+      right: 3.5%;
+    }
   }
 }

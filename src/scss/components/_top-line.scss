@@ -49,6 +49,12 @@
     display: flex;
     align-items: center;
   }
+
+  &__order-details{
+    position: absolute;
+    z-index: 3;
+    top: 100%;
+  }
 }
 
 
@@ -61,6 +67,10 @@
     &__order-data{
       width: 100%;
       justify-content: space-between;
+    }
+
+    &__order-details{
+      font-size: em(13);
     }
   }
 }
