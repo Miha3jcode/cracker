@@ -21,7 +21,6 @@
   &__container{
     $ct: 940;
     max-width: 100%;
-    //padding: em(20) em(90) em(20) em(100);
     padding: em(20) pr(115, $ct) em(20) pr(110, $ct);
     overflow: auto;
   }
@@ -30,13 +29,14 @@
     position: absolute;
     top:em(30);
     right:em(30);
-    width: em(20);
+    width: em(25);
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
     user-select: none;
+    transform: rotate(45deg);
 
     &:hover{
-      transform: rotate(90deg);
+      transform: rotate(135deg);
     }
   }
 
