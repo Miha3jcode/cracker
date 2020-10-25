@@ -2,7 +2,7 @@
 
 .header-section{
   background: url(@img/header-bg.jpg) no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 0%;
   background-size: cover;
   
   &__top-line{
@@ -20,7 +20,7 @@
   &__central-container{
     display: flex;
     justify-content: flex-end;
-    padding-bottom: em(440);
+    padding-bottom: em(180);
   }
 }
 
