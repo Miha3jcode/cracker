@@ -1,10 +1,22 @@
 @use '@utils/utils' as *; 
 
+
+
 .order-details{
   background:$detailsWhite;
   position: relative;
   display: inline-block;
   box-shadow: 0px em(24) em(48) 0px   rgba($color: #000, $alpha: 0.3), 0px em(24) em(24) 0px   rgba($color: #000, $alpha: 0.22);
+  visibility: hidden;
+  
+  &_visible{
+    animation: 0.3s ease-in-out forwards visible;
+  }
+
+  &_hidden{
+    animation: 0.3s ease-in-out forwards hidden;
+  }
+
 
   &__container{
     $ct: 940;
@@ -169,5 +181,27 @@
     &__close-icon{
       right: 3.5%;
     }
+  }
+}
+
+@keyframes visible{
+  from{
+    opacity: 0;
+    
+  }
+  to{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes hidden{
+  from{
+    opacity: 1;
+    visibility: visible;
+  }
+  to{
+    visibility: hidden;
+    opacity: 0;
   }
 }
