@@ -7,11 +7,11 @@ class OrderDetails {
 
     this.closeIcon.addEventListener('click', this.onCloseHandler.bind(this));
 
-    this.label.addEventListener('mouseover', this.mouseOverHandler.bind(this));
-    this.details.addEventListener('mouseover', this.mouseOverHandler.bind(this));
+    this.label.addEventListener('mouseenter', this.mouseOverHandler.bind(this), false);
+    this.details.addEventListener('mouseenter', this.mouseOverHandler.bind(this), false);
 
-    this.label.addEventListener('mouseout', this.mouseOutHandler.bind(this));
-    this.details.addEventListener('mouseout', this.mouseOutHandler.bind(this));
+    this.label.addEventListener('mouseleave', this.mouseOutHandler.bind(this), false);
+    this.details.addEventListener('mouseleave', this.mouseOutHandler.bind(this), false);
   }
 
   onCloseHandler() {
