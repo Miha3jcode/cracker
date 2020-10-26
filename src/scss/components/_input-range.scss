@@ -1,21 +1,9 @@
 @use '@utils/utils' as *; 
 
-@mixin line-on-bg($color){
-  //background: linear-gradient(180deg, rgba(2,0,36,0) 45%, rgba($color,1) 45%, rgba($color,1) 55%, rgba(0,0,0,0) 55%);
-}
 .input-range{
-  font-size:  em(16);
-  -webkit-appearance: none;
-  appearance: none;
-  height: em(25); 
-  @include line-on-bg($soybean);
-  outline: none; 
   position: relative;
-  background: none;
 
-  &::after{
-    content: '';
-    display: block;
+  &__bg{
     position: absolute;
     left: 0;
     top: 50%;
@@ -26,66 +14,76 @@
     background-color: $soybean;
   }
 
-  @mixin slider-thumb($color){
-    width: em(40);
-    height: em(40);
-    box-sizing: border-box;
-    border: em(2) solid $color;
-    border-radius: 100%;
-    background: rgba($color: #fff, $alpha: 0.9);
-    cursor: pointer; 
-    position: relative;
-    z-index: 1;
-  }
-
-  &::-webkit-slider-thumb {
+  &__input {
+    width: 100%;
+    font-size:  em(16);
+    -webkit-appearance: none;
     appearance: none;
-    @include slider-thumb($soybean);
-  }
+    height: em(25); 
+    outline: none; 
+    position: relative;
+    background: none;
 
-  &::-moz-range-thumb { 
-    @include slider-thumb($soybean);
-  }
-  
-  &_color_sesame{
-    &::after{
-      background-color: $sesame;
+    @mixin slider-thumb($color){
+      width: em(40);
+      height: em(40);
+      box-sizing: border-box;
+      border: em(2) solid $color;
+      border-radius: 100%;
+      background: rgba($color: #fff, $alpha: 0.9);
+      cursor: pointer; 
+      position: relative;
+      z-index: 1;
     }
 
     &::-webkit-slider-thumb {
+      appearance: none;
+      @include slider-thumb($soybean);
+    }
+
+    &::-moz-range-thumb { 
+      @include slider-thumb($soybean);
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &_color_sesame{
+    .input-range__bg{
+      background-color: $sesame;
+    }
+
+    .input-range__input::-webkit-slider-thumb {
       border: em(2) solid $sesame;
     }
-    &::-moz-range-thumb {
+    .input-range__input::-moz-range-thumb {
       border: em(2) solid $sesame;
     }
   }
   &_color_wheat{
-    &::after{
+    .input-range__bg{
       background-color: $wheat;
     }
 
-    &::-webkit-slider-thumb {
+    .input-range__input::-webkit-slider-thumb {
       border: em(2) solid $wheat;
     }
-    &::-moz-range-thumb {
+    .input-range__input::-moz-range-thumb {
       border: em(2) solid $wheat;
     }
   }
   &_color_corn{
-    &::after{
+    .input-range__bg{
       background-color: $corn;
     }
 
-    &::-webkit-slider-thumb {
+    .input-range__input::-webkit-slider-thumb {
       border: em(2) solid $corn;
     }
-    &::-moz-range-thumb {
+    .input-range__input::-moz-range-thumb {
       border: em(2) solid $corn;
     }
-  }
-
-
-  &:hover {
-    opacity: 1;
   }
 }
