@@ -8,6 +8,7 @@
   display: inline-block;
   box-shadow: 0px em(24) em(48) 0px   rgba($color: #000, $alpha: 0.3), 0px em(24) em(24) 0px   rgba($color: #000, $alpha: 0.22);
   visibility: hidden;
+  max-width: 100%;
   
   &_visible{
     animation: 0.3s ease-in-out forwards visible;
@@ -20,6 +21,8 @@
 
   &__container{
     $ct: 940;
+    width: em(780);
+    box-sizing: border-box;
     max-width: 100%;
     padding: em(20) pr(115, $ct) em(20) pr(110, $ct);
     overflow: auto;
@@ -57,10 +60,16 @@
   &__table{
     border-collapse: collapse;
     margin-bottom: em(28);
+    //min-width: 100%;
+    //min-width: em(588);
+    //table-layout: fixed;
+    //overflow: hidden;
   }
 
-  &__row{
-    width: em(588);
+  &__header-col{
+    width: em(60.5);
+    //min-width: em(60.5);
+    padding: 0;
   }
 
   &__grain-col{
@@ -162,6 +171,11 @@
     &__container{
       padding-left: 2%;
       padding-right: 2%;
+    }
+
+    &__table{
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &__seed-col{

@@ -25,7 +25,6 @@ class OrderDetails {
   }
 
   mouseOutHandler() {
-    console.log('out');
     if (this.isJustHided) {
       this.isJustHided = false;
       return;
